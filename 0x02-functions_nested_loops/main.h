@@ -1,5 +1,12 @@
 #ifndef main_h
 #define main_h
+/**
+	 * main
+	 * main holds all functions on it for instant runing
+	 *
+	 * 
+	 * 
+	 */
 
 
 	int _putchar(char);
