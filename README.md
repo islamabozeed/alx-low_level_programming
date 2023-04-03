@@ -1,1 +1,1 @@
-new task of C
+readme file
