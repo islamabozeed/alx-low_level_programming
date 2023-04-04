@@ -1,8 +1,9 @@
 #include "main.h"
-/*
- * function that gets the length of a prefix substrung
- * main - check the code
- * return always 0
+/**
+ *_strspn- Entry Point
+ *@s:main- check the code
+ *@accept: input
+ *Return: always 0
  */
 unsigned int _strspn(char *s, char *accept)
 {

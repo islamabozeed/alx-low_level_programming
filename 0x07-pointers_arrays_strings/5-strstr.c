@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * functiion locates a substring
- * main - check the code
- * return always 0
+ *_strstr - functiion locates a substring
+ *@haystack: input main - check the code
+ *@needle: input
+ *Return: always 0
  */
 char *_strstr(char *haystack, char *needle)
 {

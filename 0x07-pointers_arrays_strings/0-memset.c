@@ -1,7 +1,10 @@
 #include "main.h"
 /**
- * memeset - it refert to fill memory with specific value
- * return: changed array
+ * _memeset - it refert to fill memory with specific value
+ * @s : starting address
+ * @b : desired value
+ * @n : number of bytes
+ * Return: changed array
  */
 char *_memeset(char *s, char b, unsigned int n)
 {

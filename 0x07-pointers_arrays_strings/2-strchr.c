@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * write function locates a charcter in a string
- * return always 0
+ *_strchr-  write function locates a charcter in a string
+ *@s: for inputes
+ *@c: for another input
+ *Return: always 0
  */
 char *_strchr(char *s, char c)
 {

@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * function set a value of pointer
- * main = check the code
- * return 0
+ *set_string - function set a value of pointer
+ *@s: main = check the code
+ *@to: pointer
+ *Return: 0
  */
 
-void set_string( char **s, char *to)
+void set_string(char **s, char *to)
 {
 	*s = to;
 }

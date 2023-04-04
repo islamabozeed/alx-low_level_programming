@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
-/*
- * function prints the sum of two diagonals of square matrix of integres
- * main - test the code
- * returns always 0
+/**
+ *print_diagsums - function prints the sum of two of square matrix of integres
+ *@a: main - test the code
+ *@size: imput
+ *Rreturn: always 0
  */
 void print_diagsums(int *a, int size)
 {
@@ -16,7 +17,7 @@ void print_diagsums(int *a, int size)
 	{
 		sum1 = sum1 + a[y * size + y];
 	}
-	for ( y = size - 1; y >= 0; y--)
+	for (y = size - 1; y >= 0; y--)
 	{
 		sum2 += a[y * size + (size - y - 1)];
 	}
