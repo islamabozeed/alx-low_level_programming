@@ -19,4 +19,4 @@ int _sqrt(int n, int v)
 		return (v);
 	if (v * v < n)
 		return (_sqrt(n, v + 1));
-	return (-1);
+	return (_sqrt(-1));
