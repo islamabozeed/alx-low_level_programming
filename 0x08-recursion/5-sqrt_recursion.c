@@ -17,6 +17,8 @@ int _sqrt(int n, int v)
 {
 	if (v * v == n)
 		return (v);
-	if (v * v < n)
+	else if (v * v < n)
 		return (_sqrt(n, v + 1));
-	return (_sqrt(-1));
+	else
+		return (-1);
+}
