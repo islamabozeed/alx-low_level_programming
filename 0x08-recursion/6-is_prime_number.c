@@ -2,6 +2,7 @@
 /**
  * is_prime_number - show prime or not
  * @n: number
+ * @v: number
  * Return: result
  */
 int _helper(int n, int v);
@@ -12,7 +13,7 @@ int is_prime_number(int n)
 /**
  * _helper - for checking prime n
  * @n: number
- * @v number
+ * @v: number
  * Return: zeroo
  */
 int _helper(int n, int v)
