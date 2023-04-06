@@ -2,8 +2,6 @@
 /**
  * _sqrt_recursion - square root
  * @n: the number
- * sqrt - helper func
- * @v: helper value
  * Return: result
  */
 int sqrt(int n, int v);
@@ -11,8 +9,9 @@ int _sqrt_recursion(int n)
 {
 	return (sqrt(n, 1));
 }
-/*
+/**
  * sqrt - helper func
+ * @v: helper value
  */
 int sqrt(int n, int v)
 {
