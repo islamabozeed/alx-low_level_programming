@@ -43,7 +43,7 @@ int is_palindrome(char *s)
  */
 int _checker(char *s, int st, int nd, int mod)
 {
-	if ((st == nd && mod != 1) || (st == nd + 1 && mod == 0))
+	if ((st == nd && mod != 0) || (st == nd + 1 && mod == 0))
 		return (1);
 	else if (s[st] != s[nd])
 		return (0);
