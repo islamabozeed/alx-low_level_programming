@@ -28,7 +28,7 @@ int count_word(char *h)
 }
 /**
  * **strtow - function
- * @str: string 
+ * @str: string
  * Return: Null
  */
 char **strtow(char *str)
