@@ -3,6 +3,7 @@
 
 /**
  * *create_array -create array
+ * @size: size
  * @c: char to start the array with c
  * Return: zero
  */
