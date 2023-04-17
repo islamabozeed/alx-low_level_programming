@@ -1,64 +1,83 @@
-#include <stdlib.h>
 #include "dog.h"
-/**
- * _length - length function
- * @s: length
- * Return: 0
- */
-int _length(char *s)
-{
-	int len = 0;
+#include <stdlib.h>
 
-	while (*s++)
+/**
+ * _strlength - length
+ * @s: string
+ * Return: zero
+ */
+int _strlength(char *s)
+{
+	int len;
+
+	len = 0;
+
+	while (s[len] != '\0')
+	{
 		len++;
+	}
+
 	return (len);
 }
 /**
- * _strcp - copy
- * @cp: copy
- * @here: place
- * Return: palce
+ * *_copy - create a copy
+ * @place: pointer
+ * @source: pointer
+ * Return: place
  */
-char *_strcp(char *here, char *cp)
+char *_copy(char *place, char *source)
 {
-	int copy;
+	int length, count;
 
-	for (copy = 0; cp[copy]; copy++)
-		here[coopy] = cp[copy];
-	here[copy] = '\0';
-	return (here);
+	length = 0;
+	while (source[length] != '\0')
+	{
+		length++;
+	}
+	for (count = 0; count < length; count++)
+	{
+		place[count] = source[count];
+	}
+	place[count] = '\0';
+
+	return (place);
 }
+
 /**
- * new_dog - creates dog
+ * new_dog - new dog
  * @name: name
  * @age: age
- * @owner: owner
- * Return: pointer
+ * @owner: char
+ * Return: zero
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+	int length, length1;
 
-	if (!name || age < 0 || !owner)
-		return (NULL);
-	dog = (dog_t *) malloc(sizeof(dog_t));
+	length = _strlength(name);
+	length1 = _strlength(owner);
+
+	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	dog->name = malloc(size(char) * (_length(name) + 1));
-	if ((*dog).name == NULL)
+
+	dog->name = malloc(sizeof(char) * (length + 1));
+	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
-	dog->owner = malloc(size(char) * (_length(owner) + 1));
-	if ((*dog).owner == NULL)
+	dog->owner = malloc(sizeof(char) * (length1 + 1));
+	if (dog->owner == NULL)
 	{
+		free(dog);
 		free(dog->name);
-		free(dog);
 		return (NULL);
 	}
-	dog->name = _strcp(dog->name, name);
+	_copy(dog->name, name);
+	_copy(dog->owner, owner);
 	dog->age = age;
-	dog->owner = _strcp(dog->owner, owner);
+
 	return (dog);
 }
