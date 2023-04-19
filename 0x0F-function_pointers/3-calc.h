@@ -3,10 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 /**
- * struct op - operator strcut
- * @op: oprtsyot
- * @f: function assoc
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
  */
 typedef struct op
 {
