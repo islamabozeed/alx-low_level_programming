@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int arg1, arg2, result;
+	int argi, argii, p;
 	int (*func)(int, int);
 	char code;
 
@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	arg1 = atoi(argv[1]);
-	arg2 = atoi(argv[3]);
+	argi = atoi(argv[1]);
+	argii = atoi(argv[3]);
 
 	func = get_op_func(argv[2]);
 
@@ -30,15 +30,15 @@ int main(int argc, char *argv[])
 
 	code = *argv[2];
 
-	if ((code == '/' || o == '%') && arg2 == 0)
+	if ((code == '/' || code == '%') && argii == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	result = func(arg1, arg2);
+	p = func(argi, argii);
 
-	printf("%d\n", result);
+	printf("%d\n", p);
 
 	return (0);
 }
