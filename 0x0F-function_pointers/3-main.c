@@ -1,15 +1,17 @@
 #include "3-calc.h"
+
 /**
- * main - ckeck code
- * @argc: number
- * @argv: array 
- * Return: zero
+ * main - program that perfroms simple operations
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int argi, argii, p;
+	int arg1, arg2, result;
+	char o;
 	int (*func)(int, int);
-	char code;
 
 	if (argc != 4)
 	{
@@ -17,8 +19,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	argi = atoi(argv[1]);
-	argii = atoi(argv[3]);
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
 
 	func = get_op_func(argv[2]);
 
@@ -28,17 +30,17 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	code = *argv[2];
+	o = *argv[2];
 
-	if ((code == '/' || code == '%') && argii == 0)
+	if ((o == '/' || o == '%') && arg2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	p = func(argi, argii);
+	result = func(arg1, arg2);
 
-	printf("%d\n", p);
+	printf("%d\n", result);
 
 	return (0);
 }
