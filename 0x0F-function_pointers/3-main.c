@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int farg, sarg, fs;
+	int farg, sarg, p;
 	char o;
 	int (*func)(int, int);
 
