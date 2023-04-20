@@ -2,7 +2,7 @@
 
 /**
  * print_strings - check code
- * @separator: separating 
+ * @separator: separating
  * @n: number
  */
 
@@ -27,8 +27,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s%s", separator, unique);
 	}
-
 	printf("\n");
-
 	va_end(group);
 }

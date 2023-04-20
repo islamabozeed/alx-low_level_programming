@@ -9,11 +9,9 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	char *unique, *seap = "";
-
 	va_list group;
 
 	va_start(group, format);
-
 	if (format)
 	{
 		while (format[i])
@@ -39,13 +37,10 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
-
 			seap = ", ";
 			i++;
 		}
-
 	}
-
 	printf("\n");
 	va_end(group);
 }
